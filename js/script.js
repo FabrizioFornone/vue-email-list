@@ -2,6 +2,7 @@ new Vue({
   el: "#app",
   data: {
     emails: [],
+    counter: 0,
   },
   methods: {
     emailList: function () {
@@ -11,6 +12,7 @@ new Vue({
           .then((result) => {
             //prendiamo la "response" e salviamola in "number"
             this.emails.push(result.data.response);
+            this.counter++;
           });
       }
     },

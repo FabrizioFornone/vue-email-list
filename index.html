@@ -24,7 +24,12 @@
         <h3 class="py-4">Email List Random Generator:</h3>
         <button @click="emailList">Click on me!</button>
         <ul class="d-flex flex-column align-items-center py-4">
-          <li :class="{'grey-email': index % 2 === 0}" class="py-2" v-for="(email, index) in emails">
+          <li
+            :class="{'grey-email': index % 2 === 0}"
+            class="py-2"
+            v-for="(email, index) in emails"
+            v-if="counter === 10"
+          >
             {{email}}
           </li>
         </ul>
