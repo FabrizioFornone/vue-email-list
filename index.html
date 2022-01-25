@@ -28,7 +28,7 @@
             :class="{'grey-email': index % 2 === 0}"
             class="py-2"
             v-for="(email, index) in emails"
-            v-if="emails.length === 10"
+            v-if="emails.length % 10 === 0"
           >
             {{email}}
           </li>

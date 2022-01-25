@@ -9,7 +9,6 @@ new Vue({
         axios
           .get("https://flynn.boolean.careers/exercises/api/random/mail ")
           .then((result) => {
-            //prendiamo la "response" e salviamola in "number"
             this.emails.push(result.data.response);
           });
       }
